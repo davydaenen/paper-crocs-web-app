@@ -85,7 +85,7 @@ export const appRouter = trpc.router().query("get-paper-crocs", {
     }
 
     return {
-      data: crocsWithPaper,
+      crocsWithPaper,
     };
   },
 });

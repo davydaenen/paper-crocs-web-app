@@ -9,19 +9,30 @@ const containerStyles = {
 
 const FloorPriceCard: React.FC<{
   title: string;
-  img: string;
+  iconImg: string;
   floorPrice: string;
   currency: string;
+  img?: string;
+  name?: string;
   footer: string;
   footerUrl: string;
-}> = ({ title, img, floorPrice, currency, footer, footerUrl }) => {
+}> = ({
+  title,
+  iconImg,
+  floorPrice,
+  currency,
+  img,
+  name,
+  footer,
+  footerUrl,
+}) => {
   return (
     <div
       style={containerStyles}
       className="text-center m-4 p-4 w-4/5 md:w-1/2 h-60 md:h-80"
     >
       <div className="flex justify-center">
-        <Image src={img} alt={title} width="32px" height="32px" />
+        <Image src={iconImg} alt={title} width="42px" height="42px" />
       </div>
 
       <div className="flex justify-center text-xs md:text-base p-4">
