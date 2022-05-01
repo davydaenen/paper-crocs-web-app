@@ -2,7 +2,7 @@ import "../../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { withTRPC } from "@trpc/next";
-import { AppRouter } from "./api/trpc/[trpc]";
+import type { AppRouter } from "@/pages/api/trpc/[trpc]";
 
 function PaperCrocsApp({ Component, pageProps }: AppProps) {
   return (
@@ -52,5 +52,5 @@ export default withTRPC<AppRouter>({
   /**
    * @link https://trpc.io/docs/ssr
    */
-  ssr: true,
+  ssr: false,
 })(PaperCrocsApp);

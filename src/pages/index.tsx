@@ -1,12 +1,14 @@
 import type { NextPage } from "next";
-
-import { Layout } from "../components/layout";
-import { Banner } from "../components/banner";
-
 import "@fontsource/press-start-2p";
-import FloorPrices from "../components/floor-prices";
+import { trpc } from "@/utils/trpc";
+
+import FloorPrices from "@/components/floor-prices";
+import Layout from "@/components/layout";
+import Banner from "@/components/banner";
 
 const Home: NextPage = () => {
+  const { data, isLoading } = trpc.useQuery(["hello", { text: "paper crocs" }]);
+
   return (
     <Layout pageTitle="!CHOMP">
       <Banner></Banner>
@@ -20,6 +22,10 @@ const Home: NextPage = () => {
       </div>
 
       <FloorPrices></FloorPrices>
+
+      <div className="text-center">
+        {isLoading ? "Loading..." : data?.greeting}
+      </div>
     </Layout>
   );
 };

@@ -12,4 +12,4 @@ const Layout: React.FC<{ pageTitle: string; children: any[] }> = ({
   );
 };
 
-export { Layout };
+export default Layout;

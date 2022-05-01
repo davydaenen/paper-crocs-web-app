@@ -46,4 +46,4 @@ const FloorPriceCard: React.FC<{
   );
 };
 
-export { FloorPriceCard };
+export default FloorPriceCard;

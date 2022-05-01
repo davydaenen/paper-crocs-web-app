@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-
-import { FloorPriceCard } from "./floor-price-card";
+import React, { useState } from "react";
+import FloorPriceCard from "./floor-price-card";
 
 const FloorPrices = () => {
   const [floorPrice, setFloorPrice] = useState("-");
