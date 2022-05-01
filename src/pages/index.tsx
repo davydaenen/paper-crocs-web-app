@@ -5,8 +5,15 @@ import { trpc } from "@/utils/trpc";
 import FloorPrices from "@/components/floor-prices";
 import Layout from "@/components/layout";
 import Banner from "@/components/banner";
+import { useEffect } from "react";
 
 const Home: NextPage = () => {
+  const { data, isLoading } = trpc.useQuery(["get-paper-crocs"]);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   return (
     <Layout pageTitle="!CHOMP">
       <Banner></Banner>
