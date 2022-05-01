@@ -12,8 +12,8 @@ const FloorPriceCard: React.FC<{
   iconImg: string;
   floorPrice: string;
   currency: string;
-  img?: string;
-  name?: string;
+  img: string;
+  name: string;
   footer: string;
   footerUrl: string;
 }> = ({
@@ -29,7 +29,7 @@ const FloorPriceCard: React.FC<{
   return (
     <div
       style={containerStyles}
-      className="text-center m-4 p-4 w-4/5 md:w-1/2 h-60 md:h-80"
+      className="text-center m-4 p-4 w-4/5 md:w-1/2 h-auto md:h-auto"
     >
       <div className="flex justify-center">
         <Image src={iconImg} alt={title} width="42px" height="42px" />
@@ -43,6 +43,11 @@ const FloorPriceCard: React.FC<{
         <span className="text-xl md:text-2xl 2xl:text-4xl">{floorPrice}</span>{" "}
         {currency}
       </p>
+
+      <div className="flex justify-center">
+        <Image src={img} alt={name} width="85px" height="100px" />
+      </div>
+
       <a
         className={
           footerUrl ? "underline text-xs md:text-base" : "text-xs md:text-base"
@@ -51,7 +56,7 @@ const FloorPriceCard: React.FC<{
         target="_blank"
         rel="noreferrer"
       >
-        {footer}
+        ↗️&nbsp;{footer}
       </a>
     </div>
   );
