@@ -7,8 +7,6 @@ import Layout from "@/components/layout";
 import Banner from "@/components/banner";
 
 const Home: NextPage = () => {
-  const { data, isLoading } = trpc.useQuery(["hello", { text: "paper crocs" }]);
-
   return (
     <Layout pageTitle="!CHOMP">
       <Banner></Banner>
@@ -22,10 +20,6 @@ const Home: NextPage = () => {
       </div>
 
       <FloorPrices></FloorPrices>
-
-      <div className="text-center">
-        {isLoading ? "Loading..." : data?.greeting}
-      </div>
     </Layout>
   );
 };
