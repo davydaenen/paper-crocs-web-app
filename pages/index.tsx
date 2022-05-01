@@ -4,6 +4,7 @@ import { Layout } from "../components/layout";
 import { Banner } from "../components/banner";
 
 import "@fontsource/press-start-2p";
+import FloorPrices from "../components/floor-prices";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +18,8 @@ const Home: NextPage = () => {
         </p>
         <h1 className="text-6xl mb-8">🐊🧻</h1>
       </div>
-      <div></div>
+
+      <FloorPrices></FloorPrices>
     </Layout>
   );
 };

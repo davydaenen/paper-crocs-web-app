@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Banner: React.FC<{}> = ({}) => {
   return (
-    <div className="h-64 relative">
+    <div className="h-44 relative">
       <Image
         src="/static/media/paperdrop.jpg"
         alt="paperdrop"
