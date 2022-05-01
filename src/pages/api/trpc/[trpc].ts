@@ -1,3 +1,4 @@
+import allowCors from "@/utils/allow-cors";
 import * as trpc from "@trpc/server";
 import * as trpcNext from "@trpc/server/adapters/next";
 import { ethers } from "ethers";
@@ -94,7 +95,8 @@ export const appRouter = trpc.router().query("get-paper-crocs", {
 export type AppRouter = typeof appRouter;
 
 // export API handler
-export default trpcNext.createNextApiHandler({
+const handler = trpcNext.createNextApiHandler({
   router: appRouter,
   createContext: () => null,
 });
+export default allowCors(handler);
