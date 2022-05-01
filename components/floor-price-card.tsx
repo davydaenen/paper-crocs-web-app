@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const containerStyles = {
   backgroundColor: "#1a0f30",
-  border: "3px solid #4b2999",
-  borderRadius: "5%",
+  border: "8px solid",
+  borderImage: "linear-gradient(0deg, #c471ed, #4b2999) 1",
 };
 
 const FloorPriceCard: React.FC<{
