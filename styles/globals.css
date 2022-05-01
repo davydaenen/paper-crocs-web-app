@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 html {
-  background-color: #000;
-  color: #FFFFFF;
   font-family: "Press Start 2P" ,sans-serif !important;
+}
+
+body {
+  @apply text-white bg-gray-900
 }
