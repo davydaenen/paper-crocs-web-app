@@ -57,6 +57,7 @@ export const appRouter = trpc.router().query("get-paper-crocs", {
       headers: {
         "Content-Type": "application/json",
         Origin: "https://www.gem.xyz",
+        "x-api-key": "iMHRYlpIXs3zfcBY1r3iKLdqS2YUuOUs"
       },
       body: JSON.stringify(request),
     });
