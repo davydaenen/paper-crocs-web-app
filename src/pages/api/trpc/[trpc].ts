@@ -6,7 +6,7 @@ import { z } from "zod";
 
 const ACROC_PAPERCLAIMS_CONTRACT_ADDRESS =
   "0x28B702A9f771bfC04fA95cA57AD4a29fF4b39207";
-const GEM_XYZ_ASSETS_URL = "https://gem-api-3.herokuapp.com/assets";
+const GEM_XYZ_ASSETS_URL = "https://api-1.gemlabs.xyz/assets";
 const request = {
   filters: {
     traits: {},
@@ -56,8 +56,9 @@ export const appRouter = trpc.router().query("get-paper-crocs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
         Origin: "https://www.gem.xyz",
-        "x-api-key": "iMHRYlpIXs3zfcBY1r3iKLdqS2YUuOUs"
+        "x-api-key": "iMHRYlpIXs3zfcBY1r3iKLdqS2YUuOUs",
       },
       body: JSON.stringify(request),
     });
