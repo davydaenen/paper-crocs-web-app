@@ -96,9 +96,9 @@ const Home: NextPage = () => {
                     "ID",
                     {
                       name: "Croc",
-                      formatter: (cell) =>
+                      formatter: (cell, row) =>
                         html(
-                          `<img src=${cell} alt='croc pic' width="60px" height="85px" />`
+                          `<a target="_blank" rel="noreferrer" style="text-decoration: underline;" href='${row.cells[3].data}'><img src=${cell} alt='croc pic' width="60px" height="85px" /></a>`
                         ),
                     },
                     {
